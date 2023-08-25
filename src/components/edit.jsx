@@ -50,7 +50,7 @@ const Edit = () => {
     useEffect(() => {
         const getData = async() => {
             try {
-                const apiUrl = "http://localhost:3000/posts";
+                const apiUrl = "https://blogapi-production-0802.up.railway.app/posts";
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 setData(data);
@@ -63,7 +63,7 @@ const Edit = () => {
     },[check])
     const deletePost = async(item) => {
         try
-        { fetch(`http://localhost:3000/posts/${item._id}`,
+        { fetch(`https://blogapi-production-0802.up.railway.app/posts/${item._id}`,
         {method:"DELETE",
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`,
