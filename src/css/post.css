@@ -108,3 +108,32 @@
     font-family: fancyText;
     src: url("../assets/LittleLordFontleroyNF.otf");
 }
+@media screen and (max-width: 576px) {
+    header{
+    }
+    .actual-comments {
+        gap: 0em;
+    }
+
+    .comments {
+        gap: 1em;
+    }
+    .comment-text {
+        padding-left: 1rem;
+        font-family: fancyText, Arial, Helvetica, sans-serif; 
+        font-size: 1.5rem;
+    }
+    .one-comment {
+        display: flex;
+        padding: .5em;
+        border-radius: 1em;
+    }
+    .post-container, .comments {
+        padding: 1em;
+    }
+    .main-content {
+        padding: 1em;
+    }
+}
+
+
