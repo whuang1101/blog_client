@@ -35,7 +35,7 @@ const CommentEdit = () => {
     }
     const deleteHandle = (item) => {
         const message = {...item};
-        fetch(`http://localhost:3000/comments/${id}`, {
+        fetch(`https://blogapi-production-0802.up.railway.app/comments/${id}`, {
             method: "DELETE",
             headers: {
               "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -57,7 +57,7 @@ const CommentEdit = () => {
 
         const fetchData = async () => {  
             try {
-                const apiUrl = `http://localhost:3000/posts/${id}`;
+                const apiUrl = `https://blogapi-production-0802.up.railway.app/posts/${id}`;
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 setData(data);

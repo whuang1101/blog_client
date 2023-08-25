@@ -13,7 +13,7 @@ const Homepage = () => {
         useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = "http://localhost:3000/posts";
+                const apiUrl = "https://blogapi-production-0802.up.railway.app/posts";
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 setData(data);

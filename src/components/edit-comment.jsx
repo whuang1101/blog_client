@@ -19,7 +19,7 @@ const EditComment = ({dropIn,setEditOpen, setComment, comment, setData, data}) =
         e.preventDefault()
         const message = {... comment}
 
-        fetch(`http://localhost:3000/comments/${message._id}`, {
+        fetch(`https://blogapi-production-0802.up.railway.app/comments/${message._id}`, {
             method:"PUT",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`,

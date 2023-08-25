@@ -8,7 +8,7 @@ const PostEdit = ({editPost, setEditPost, dropIn, setEditOpen, setData}) => {
         e.preventDefault();
         
         try
-        { fetch(`http://localhost:3000/posts/${editPost._id}`,
+        { fetch(`https://blogapi-production-0802.up.railway.app/posts/${editPost._id}`,
         {method:"PUT",
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`,
