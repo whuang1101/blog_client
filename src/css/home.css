@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: BoldFont, 'Times New Roman', Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+#root {
+    position: relative;
+}
+#container {
+    position: relative;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 1em;
+    align-items: center;
+    background-color: rgb(18,18,18);
+    color: white;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    height: 6em;
+    font-size: clamp(10px,1em,20px);
+}
+nav {
+    font-family: BoldFont,'Times New Roman', Times, serif;
+    display: flex;
+    font-size: 1.5em;
+    gap: clamp(0em,1em,2em);
+    align-items: center;
+}
+
+.title {
+    font-family: BoldFont,'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+.home-section, .data-section {
+    height: calc(100vh - 6em);
+    background-image: url("../assets/photo-1486312338219-ce68d2c6f44d.jpeg");
+    background-size: cover;
+    position: relative;
+}
+
+.title-sequence {
+    font-size: 3.5em;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: absolute;
+}
+.blog-section {
+    display: flex;
+    justify-content: center;
+    padding: 6em;
+    background-color: white;
+    z-index: 1;
+    background-image: url("../assets/blog-background.webp");
+}
+.blogs {
+    padding: 1em;
+    width: clamp(70%,1200px, 95%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2em;
+}
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+}
+.blog-title {
+    position: absolute;
+    bottom: 0%;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+.picture{
+    color: white;
+    position: relative;
+    border: 1px solid white;
+}
+.picture {
+    flex: 1;
+    border-radius: 1em;
+    background-color: white;
+}
+.read {
+    flex:.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+        outline: none;
+        color: darkred;
+}
+.credits {
+    font-size: 2em;
+    font-family: BoldFont, 'Times New Roman', Times, serif;
+    color: white;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: black;
+}
+
+@font-face {
+    font-family: BoldFont;
+    src: url("../assets/SuperEasy-ZVAr3.ttf");
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        font-size: .5em;
+    }
+    .home-section {
+        height: calc(100vh - 3em);
+    }
+    .blog-section, .data-section {
+        padding: 3em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .blogs {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
