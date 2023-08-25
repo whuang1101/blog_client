@@ -135,3 +135,32 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 }
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    header {
+        font-size: .75em;
+    }
+    .home-section {
+        height: calc(100vh - 3em);
+    }
+    .blog-section, .data-section {
+        padding: 3em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .blogs {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+    .home-section {
+        height: calc(100vh - 6em);
+    }
+    .blog-section, .data-section {
+        padding: 3em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .blogs {
+        grid-template-columns: repeat(3,1fr);
+    }
+}

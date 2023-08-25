@@ -90,7 +90,7 @@
 .comment-text {
     padding-left: 1em;
     font-family: fancyText, Arial, Helvetica, sans-serif; 
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .comment-user, .comment-text {
     display: flex;
@@ -98,6 +98,7 @@
 }
 .comment-user {
     border-right: 1px solid black;
+    font-size: 1.5rem;
     align-items:  center;
 }
 .add-comment {
