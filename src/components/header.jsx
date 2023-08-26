@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import "../css/home.css";
 import {motion} from "framer-motion"
+
 const Header = () => {
     const handleHomeClick = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -30,7 +32,7 @@ const Header = () => {
             whileTap={{ scale: 0.9 }}
             className="post" onClick={handleScrollDown} onKeyDown={handleScrollDownEnter}>Post</motion.h3>
             <motion.h3 whileHover={{ scale: 1.1 }} tabIndex={-1}
-            whileTap={{ scale: 0.9 }}><a href= "/login" style={{color:"white", textDecoration: "none"}}>Login</a></motion.h3>
+            whileTap={{ scale: 0.9 }}><Link to= "/login" style={{color:"white", textDecoration: "none"}}>Login</Link></motion.h3>
         </nav>
     </header>
  )

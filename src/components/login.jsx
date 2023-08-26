@@ -1,6 +1,7 @@
 import {motion} from "framer-motion"
 import "../css/login.css"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -41,11 +42,11 @@ const Login = () => {
         transition={{ duration: 1 }}>
         <header>
         <motion.h1 whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}className="title" tabIndex={-1} ><a href="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</a></motion.h1>
+        whileTap={{ scale: 0.9 }}className="title" tabIndex={-1} ><Link to="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</Link></motion.h1>
         <nav>
             <motion.h3 whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="home" tabIndex={-1}><a href="/" style={{color:"white", textDecoration:"none"}}>Home</a></motion.h3>
+            className="home" tabIndex={-1}><Link to="/" style={{color:"white", textDecoration:"none"}}>Home</Link></motion.h3>
         </nav>
     </header>
     <div className="home-section">

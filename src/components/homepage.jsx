@@ -3,6 +3,8 @@ import Header from "./header"
 import Typewriter from "typewriter-effect";
 import Footer from "./footer";
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom";
+
 
 const Homepage = () => {
         const fadeInVariants = {
@@ -50,7 +52,7 @@ const Homepage = () => {
                 <div className="blogs">
                     {data.map(item => (
                         item.is_published &&
-                        <a key={item._id} href={`/${item._id}`}><motion.div tabIndex={-1}
+                        <Link key={item._id} to={`/${item._id}`}><motion.div tabIndex={-1}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="blog-post"  >
@@ -60,7 +62,7 @@ const Homepage = () => {
                         </div>
 
                     </motion.div>
-                    </a>
+                    </Link>
                     ))}
                 </div>
             </div>

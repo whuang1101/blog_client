@@ -4,6 +4,8 @@ import "../css/post.css";
 import { useParams } from 'react-router-dom';
 import Footer from "./footer";
 import LoadingScreen from "./loading-screen";
+import { Link } from "react-router-dom";
+
 const Post = () => {
     const {id} = useParams();
     const [user, setUser] = useState("");
@@ -64,11 +66,11 @@ const Post = () => {
         transition={{ duration: 1 }}>
         <header>
             <motion.h1 whileHover={{ scale: 1.1 }} tabIndex={-1}
-            whileTap={{ scale: 0.9 }}className="title" ><a href="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</a></motion.h1>
+            whileTap={{ scale: 0.9 }}className="title" ><Link to="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</Link></motion.h1>
             <nav>
                 <motion.h3 whileHover={{ scale: 1.1 }} tabIndex={-1}
                 whileTap={{ scale: 0.9 }}
-            className="home"><a href="/" style={{color:"white", textDecoration:"none"}}>Home</a></motion.h3>
+            className="home"><Link to="/" style={{color:"white", textDecoration:"none"}}>Home</Link></motion.h3>
             </nav>
         </header>
         <div className="main-content" >

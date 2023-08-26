@@ -3,6 +3,7 @@ import { motion} from "framer-motion";
 import "../css/editor.css"
 import PostEdit from "./edit-post";
 import ActualHeader from "./actual-header";
+import { Link } from "react-router-dom";
 const Edit = () => {
     const [data, setData] = useState([]);
     const [check, setCheck] = useState(false);
@@ -87,7 +88,7 @@ const Edit = () => {
             is_published: isPublished
         }
         try
-       { fetch("http://localhost:3000/posts/",
+       { fetch("https://blogapi-production-0802.up.railway.app/posts/",
         {method:"POST",
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -163,19 +164,19 @@ const Edit = () => {
 
 <header>
         <motion.h1 whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}className="title" ><a href="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</a></motion.h1>
+        whileTap={{ scale: 0.9 }}className="title" ><Link to="/" style={{color:"white", textDecoration:"none"}}>The Best Blog</Link></motion.h1>
         <nav>
         <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="home" onClick={() => open()}> + Add Blog</motion.h3>
             <motion.h3 whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="home"><a href="/" style={{color:"white", textDecoration:"none"}}>Home</a></motion.h3>
+            className="home"><Link to="/" style={{color:"white", textDecoration:"none"}}>Home</Link></motion.h3>
         </nav>
     </header>
     <div className="data-section">
         <div className="blog-editor">
             {data.map((item) => (
                 <div className="blog-edit" key={item._id}>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="home"><a href={`/protected/${item._id}`} style={{color: "white" , textDecoration: "none"}}>{item.title}</a></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="home"><Link to={`/protected/${item._id}`} style={{color: "white" , textDecoration: "none"}}>{item.title}</Link></motion.div>
                     <div className="publish-delete">
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="edit" onClick={() => {handleEditPost(item)}}>
                             Edit

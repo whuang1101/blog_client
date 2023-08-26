@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const ActualHeader = () => {
     return (
@@ -8,7 +9,7 @@ const ActualHeader = () => {
             <nav>
                 <motion.h3 whileHover={{ scale: 1.1 }} tabIndex={-1}
                 whileTap={{ scale: 0.9 }}
-            className="home"><a href="/" style={{color:"white", textDecoration:"none"}}>Home</a></motion.h3>
+            className="home"><Link to="/" style={{color:"white", textDecoration:"none"}}>Home</Link></motion.h3>
             </nav>
         </header>
     )
