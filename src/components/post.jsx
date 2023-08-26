@@ -39,7 +39,7 @@ const Post = () => {
         }
         e.preventDefault();
         try
-        { fetch("http://localhost:3000/comments/",
+        { fetch("https://blogapi-production-0802.up.railway.app/comments/",
          {method:"POST",
          headers: {
              "Content-Type": "application/json"
