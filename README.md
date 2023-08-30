@@ -33,4 +33,4 @@ If you would like to see any more features at work please reach out to me on lin
 
 ## Works
 - [Previous Project- Members-Only](https://github.com/whuang1101/members-only)
-- Next Project in the works
+- [Next Project - Photo-Tagging-App](https://github.com/whuang1101/photo-tagging/)
